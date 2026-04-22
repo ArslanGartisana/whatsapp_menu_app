@@ -36,10 +36,11 @@ function renderProducts() {
   productsContainer.innerHTML = products
     .map((product) => {
       const qty = state.quantities[product.id] ?? 1;
+
       return `
         <article class="product-card">
           <div class="product-card__image">
-            <img src="${product.image}" alt="${product.name}" class="product-card__photo">
+            <img src="${product.image}" alt="${product.name}" class="product-card__photo" loading="eager" />
           </div>
 
           <div class="product-card__body">

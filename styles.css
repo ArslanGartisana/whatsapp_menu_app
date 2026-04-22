@@ -1,6 +1,6 @@
 :root {
   --bg: #ececec;
-  --surface: rgba(255, 255, 255, 0.8);
+  --surface: rgba(255, 255, 255, 0.82);
   --surface-strong: #ffffff;
   --text: #121212;
   --muted: #666666;
@@ -33,6 +33,10 @@ button,
 input,
 textarea {
   font: inherit;
+}
+
+img {
+  max-width: 100%;
 }
 
 .app-shell {
@@ -148,7 +152,7 @@ textarea {
   border: none;
   border-radius: 50%;
   background: #111111;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -164,7 +168,7 @@ textarea {
   border-radius: 16px;
   padding: 14px 16px;
   background: #111111;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   font-weight: 700;
 }
