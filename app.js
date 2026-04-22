@@ -3,19 +3,19 @@ const CURRENCY = '₪';
 
 const products = [
   {
-    id: 'paper-roll',
+    id: 'paper',
     name: 'لفة ورق 1.5 كيلو',
-    description: 'لفة ورق 1.5 كيلو',
+    description: '',
     price: 100,
-    emoji: '🧻',
+    image: 'images/paper.jpg'
   },
   {
-    id: 'wipes-buckets',
-    name: 'مגבונים',
+    id: 'wipes',
+    name: 'מגבונים',
     description: '8 سطولة',
     price: 100,
-    emoji: '🪣',
-  },
+    image: 'images/wipes.jpg'
+  }
 ];
 
 const state = {
@@ -39,7 +39,7 @@ function renderProducts() {
       return `
         <article class="product-card">
           <div class="product-card__image">
-            <div class="placeholder-art" aria-hidden="true">${product.emoji}</div>
+            <div class="placeholder-art" aria-hidden="true"><img src="${product.image}" alt="${product.name}" class="product-image"></div>
           </div>
           <div class="product-card__body">
             <h2 class="product-card__name">${product.name}</h2>
