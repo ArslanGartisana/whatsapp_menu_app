@@ -291,14 +291,17 @@ img {
 }
 
 .whatsapp-btn__icon {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   display: inline-flex;
+  flex-shrink: 0;
 }
 
-.whatsapp-btn__icon svg {
+.whatsapp-btn__icon-img {
   width: 100%;
   height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 @media (max-width: 640px) {

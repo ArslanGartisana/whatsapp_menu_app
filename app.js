@@ -5,7 +5,7 @@ const products = [
   {
     id: 'paper',
     name: 'لفة ورق 1.5 كيلو',
-    description: '',
+    description: '4 لفات',
     price: 100,
     image: 'images/paper.jpg'
   },
