@@ -39,19 +39,23 @@ function renderProducts() {
       return `
         <article class="product-card">
           <div class="product-card__image">
-            <div class="placeholder-art" aria-hidden="true"><img src="${product.image}" alt="${product.name}" class="product-image"></div>
+            <img src="${product.image}" alt="${product.name}" class="product-card__photo">
           </div>
+
           <div class="product-card__body">
             <h2 class="product-card__name">${product.name}</h2>
-            <p class="product-card__desc">${product.description || ''}</p>
+            ${product.description ? `<p class="product-card__desc">${product.description}</p>` : ''}
+
             <div class="product-card__footer">
               <div class="product-card__price">${money(product.price)}</div>
+
               <div class="qty-control" aria-label="الكمية">
                 <button type="button" data-action="decrease" data-id="${product.id}">-</button>
                 <span class="qty-value">${qty}</span>
                 <button type="button" data-action="increase" data-id="${product.id}">+</button>
               </div>
             </div>
+
             <button class="add-btn" type="button" data-action="add" data-id="${product.id}">
               أضف إلى السلة
             </button>
@@ -176,12 +180,6 @@ cartItemsContainer.addEventListener('click', (event) => {
 });
 
 orderButton.addEventListener('click', handleOrder);
-
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js').catch(() => {});
-  });
-}
 
 renderProducts();
 renderCart();
